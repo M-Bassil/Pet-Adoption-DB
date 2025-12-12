@@ -2,10 +2,9 @@ import java.sql.*;
 import java.util.*;
 
 public class PetAdoptionSystem {
-
-    // ==========================================
+    
     // DATABASE CONNECTION
-    // ==========================================
+
     public static Connection getConnection() {
         try {
             String url = "jdbc:mysql://localhost:3306/pet_adoption";
@@ -17,10 +16,9 @@ public class PetAdoptionSystem {
             return null;
         }
     }
-
-    // ==========================================
+    
     // ADD A PET (CREATE)
-    // ==========================================
+    
     public static void addPet() {
         try (Connection conn = getConnection()) {
             Scanner sc = new Scanner(System.in);
@@ -52,9 +50,9 @@ public class PetAdoptionSystem {
         }
     }
 
-    // ==========================================
+
     // VIEW PETS (READ)
-    // ==========================================
+
     public static void viewPets() {
         try (Connection conn = getConnection()) {
             String sql = "SELECT * FROM pets";
@@ -81,9 +79,9 @@ public class PetAdoptionSystem {
         }
     }
 
-    // ==========================================
+
     // UPDATE PET (UPDATE)
-    // ==========================================
+
     public static void updatePet() {
         try (Connection conn = getConnection()) {
             Scanner sc = new Scanner(System.in);
@@ -126,9 +124,9 @@ public class PetAdoptionSystem {
         }
     }
 
-    // ==========================================
+
     // DELETE PET (DELETE)
-    // ==========================================
+
     public static void deletePet() {
         try (Connection conn = getConnection()) {
             Scanner sc = new Scanner(System.in);
@@ -152,9 +150,8 @@ public class PetAdoptionSystem {
         }
     }
 
-    // ==========================================
     // MAIN MENU
-    // ==========================================
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -183,3 +180,4 @@ public class PetAdoptionSystem {
         }
     }
 }
+
